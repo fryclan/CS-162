@@ -1,0 +1,14 @@
+Your name is
+Phillip
+Your class is
+Wizard
+Your stats are
+{'Strength': 10, 'Dexterity': 14, 'Constitution': 10, 'Wisdom': 8, 'Inteligence': 10, 'Charisma': 11}
+Your stat modifiers are
+{'Strength': 0, 'Dexterity': 2, 'Constitution': 0, 'Wisdom': -1, 'Inteligence': 0, 'Charisma': 0}
+Your skills are
+{'Athletics': 0, 'Acrobatics': 2, 'Sleight of Hand': 2, 'Stealth': 2, 'Arcana': 0, 'History': 0, 'Investigation': 0, 'Nature': 0, 'Religion': 0, 'Animal Handling': -1, 'Insight': -1, 'Medicine': -1, 'Perception': -1, 'Survival': -1, 'Deception': 0, 'Intimidation': 0, 'Performance': 0, 'Persuasion': 0}
+You also know these spells
+[['Booming Blade', 'Mending', 'Friends', 'Sleep', 'Snare']]
+These are the items in you inventory
+{'Dagger': 1, 'Arcane Focus': 1, 'Explorers Pack': 1, 'Spellbook': 1}
