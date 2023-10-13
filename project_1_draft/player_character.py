@@ -1,7 +1,8 @@
 """class containing player character info"""
 
 #imports the classes from other file
-from adventure_classes import Barbarian, Wizard, Cleric, roll_points
+from adventure_classes import Barbarian, Wizard, Cleric
+from random_rolls_class import roll_points
 
 class Adventurer:
     """class for creating an adventurer"""
@@ -17,7 +18,7 @@ class Adventurer:
         self._inventory: dict = {}    
         self.level = 1
         self.name = str(input("what is your name: "))
-        self.stat_dict = {name: roll_points() for name in self._stats_list}
+        self.stat_dict = {name: roll_points() for name in self._stats_list} #name: roll_points() for name in self._stats_list
         self.health:int = 0
         self.player_type = 5
         self.spells = []
@@ -108,31 +109,4 @@ These are the items in you inventory\n{self._inventory}")
 
     def __str__(self) -> str:
         return self.new_character
-
-character_loop = input("do you want to make an adventurer: Y/N\n").strip().title()
-while character_loop == "Y":
-    if __name__ == "__main__":
-        me = Adventurer()
-        """sends all of the information to a file with the same name you gave
-        your adventurer will overwrite any duplacates."""
-    # Path
-    try:
-        open(f"{me.name}.txt", "x")
-    except FileExistsError:
-        open(f"{me.name}.txt", "w")
-
-    # opens with 
-    f = open(f"{me.name}.txt", "a")
-    
-    f.write(me.new_character)
-    
-    character_loop = input("do you want to make an adventurer: Y/N\n").strip().title()
-    
-    f.close
-    
-else: #character_loop != "Y"
-    print("Goodbye!")
-    
-    
-    
     

@@ -12,19 +12,6 @@ import logging
 #                     level=logging.DEBUG, 
 #                     format='%(filename)s:%(lineno)s %(levelname)s:%(message)s')
 
-
-def roll_points():
-    """Creates a number to use as a stat following the requirements 
-    for a 5e dnd character
-
-    Returns:
-        A int
-    """
-    points = [random.randint(1, 6) for _ in range(4)]
-    lowest = min(points)
-    points.remove(lowest)
-    return sum(points)
-
 class Barbarian:
     _starting_gear = {"Great Axe" : 1, 
                       "Hand Axe" : 2,
