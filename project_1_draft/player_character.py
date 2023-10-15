@@ -3,6 +3,9 @@
 #imports the classes from other file
 from adventure_classes import Barbarian, Wizard, Cleric
 from random_rolls_class import roll_points
+import tkinter as tk
+
+root = tk.Tk()
 
 class Adventurer:
     """class for creating an adventurer"""
@@ -17,7 +20,10 @@ class Adventurer:
     def __init__(self):
         self._inventory: dict = {}    
         self.level = 1
-        self.name = str(input("what is your name: "))
+        # self.name = str(input("what is your name: "))
+        self.entry_stringvar = tk.StringVar(root, "Enter Your Name")
+        self.name = tk.Entry(root, textvariable=self.entry_stringvar)
+        self.name.pack()
         self.stat_dict = {name: roll_points() for name in self._stats_list} #name: roll_points() for name in self._stats_list
         self.health:int = 0
         self.player_type = 5

@@ -2,7 +2,7 @@
 import player_character
 import tkinter as tk
 
-root = tk.Tk()
+player_character.root = tk.Tk()
 
 
 character_loop = input("do you want to make an adventurer: Y/N\n").strip().title()
@@ -28,8 +28,8 @@ while character_loop == "Y":
     
 else: #character_loop != "Y"
     print("Goodbye!")
-label = tk.Label(root, text=me.new_character)
+label = tk.Label(player_character.root, text=me.new_character)
 label.pack()
-root.mainloop()
+player_character.root.mainloop()
 
     
