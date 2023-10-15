@@ -1,0 +1,14 @@
+Your name is
+Y'shtola
+Your class is
+Wizard
+Your stats are
+{'Strength': 9, 'Dexterity': 14, 'Constitution': 9, 'Wisdom': 11, 'Inteligence': 12, 'Charisma': 10}
+Your stat modifiers are
+{'Strength': 0, 'Dexterity': 2, 'Constitution': 0, 'Wisdom': 0, 'Inteligence': 1, 'Charisma': 0}
+Your skills are
+{'Athletics': 0, 'Acrobatics': 2, 'Sleight of Hand': 2, 'Stealth': 2, 'Arcana': 1, 'History': 1, 'Investigation': 1, 'Nature': 1, 'Religion': 1, 'Animal Handling': 0, 'Insight': 0, 'Medicine': 0, 'Perception': 0, 'Survival': 0, 'Deception': 0, 'Intimidation': 0, 'Performance': 0, 'Persuasion': 0}
+You also know these spells
+[['Mage Hand', 'Fire Bolt', 'Friends', 'Alarm', 'Magic Missile']]
+These are the items in you inventory
+{'Dagger': 1, 'Arcane Focus': 1, 'Explorers Pack': 1, 'Spellbook': 1}
