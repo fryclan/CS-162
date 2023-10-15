@@ -20,13 +20,14 @@ class Adventurer:
     def __init__(self):
         self._inventory: dict = {}    
         self.level = 1
-        # self.name = str(input("what is your name: "))
-        self.entry_stringvar = tk.StringVar(root, "Enter Your Name")
-        self.name = tk.Entry(root, textvariable=self.entry_stringvar)
-        self.name.pack()
+        self.name = str(input("what is your name: "))
+        # self.entry_stringvar = tk.StringVar(root, "enter your name")
+        # self.name = tk.Entry(root, textvariable=self.entry_stringvar)
+        # self.entry_stringvar.set("Enter Your Name")
+        # self.name.pack()
         self.stat_dict = {name: roll_points() for name in self._stats_list} #name: roll_points() for name in self._stats_list
         self.health:int = 0
-        self.player_type = 5
+        self.player_type = 0
         self.spells = []
         self.player_class()
         self.modifier_dict = {}
@@ -72,7 +73,7 @@ These are the items in you inventory\n{self._inventory}")
         """loops through untill the user inputs an int that will match
           a class, then sets up the class with what it needs.
         """
-        while 0 < self.player_type:
+        while self.player_type != (1 , 2 , 3 , 0):
             if self.player_type == 1:
                 self.player_type = "Barbarian"
                 player = Barbarian()
@@ -90,8 +91,13 @@ These are the items in you inventory\n{self._inventory}")
                 self.spells.append(player.magic())
                 self._inventory.update(Cleric._starting_gear)
                 break
+            elif self.player_type == 0:
+                try:
+                    self.player_type = int(input("What class of adventurer do you want to be:\n1.) Barbarian 2.) Wizard 3.) Cleric\n"))
+                except ValueError:
+                    print(f"Not a valid option. Try a number\n")
+                    self.player_type = int(input("What class of adventurer do you want to be:\n1.) Barbarian 2.) Wizard 3.) Cleric\n"))
             else:
-                print(f"{self.player_type} Is your current class")
                 try:
                     print(f"{self.player_type} is not a valid option")
                     self.player_type = int(input("What class of adventurer do you want to be:\n1.) Barbarian 2.) Wizard 3.) Cleric\n"))

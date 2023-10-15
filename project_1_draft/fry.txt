@@ -1,13 +1,13 @@
 Your name is
-fry
+Fry
 Your class is
 Barbarian
 Your stats are
-{'Strength': 9, 'Dexterity': 11, 'Constitution': 12, 'Wisdom': 11, 'Inteligence': 5, 'Charisma': 7}
+{'Strength': 14, 'Dexterity': 13, 'Constitution': 10, 'Wisdom': 15, 'Inteligence': 14, 'Charisma': 14}
 Your stat modifiers are
-{'Strength': 0, 'Dexterity': 0, 'Constitution': 1, 'Wisdom': 0, 'Inteligence': -2, 'Charisma': -2}
+{'Strength': 2, 'Dexterity': 2, 'Constitution': 0, 'Wisdom': 2, 'Inteligence': 2, 'Charisma': 2}
 Your skills are
-{'Athletics': 0, 'Acrobatics': 0, 'Sleight of Hand': 0, 'Stealth': 0, 'Arcana': -2, 'History': -2, 'Investigation': -2, 'Nature': -2, 'Religion': -2, 'Animal Handling': 0, 'Insight': 0, 'Medicine': 0, 'Perception': 0, 'Survival': 0, 'Deception': -2, 'Intimidation': -2, 'Performance': -2, 'Persuasion': -2}
+{'Athletics': 2, 'Acrobatics': 2, 'Sleight of Hand': 2, 'Stealth': 2, 'Arcana': 2, 'History': 2, 'Investigation': 2, 'Nature': 2, 'Religion': 2, 'Animal Handling': 2, 'Insight': 2, 'Medicine': 2, 'Perception': 2, 'Survival': 2, 'Deception': 2, 'Intimidation': 2, 'Performance': 2, 'Persuasion': 2}
 You also know these spells
 []
 These are the items in you inventory
