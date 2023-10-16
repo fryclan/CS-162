@@ -1,0 +1,14 @@
+Your name is
+Enter Your Name
+Your class is
+Wizard
+Your stats are
+{'Strength': 14, 'Dexterity': 12, 'Constitution': 10, 'Wisdom': 12, 'Inteligence': 11, 'Charisma': 14}
+Your stat modifiers are
+{'Strength': 2, 'Dexterity': 1, 'Constitution': 0, 'Wisdom': 1, 'Inteligence': 0, 'Charisma': 2}
+Your skills are
+{'Athletics': 2, 'Acrobatics': 1, 'Sleight of Hand': 1, 'Stealth': 1, 'Arcana': 0, 'History': 0, 'Investigation': 0, 'Nature': 0, 'Religion': 0, 'Animal Handling': 1, 'Insight': 1, 'Medicine': 1, 'Perception': 1, 'Survival': 1, 'Deception': 2, 'Intimidation': 2, 'Performance': 2, 'Persuasion': 2}
+You also know these spells
+[['gust', 'fire bolt', 'friends', 'witch bolt', 'alarm']]
+These are the items in you inventory
+{'Dagger': 1, 'Arcane Focus': 1, 'Explorers Pack': 1, 'Spellbook': 1}

@@ -37,52 +37,17 @@ class Wizard:
 
         Returns:
             A list that is a combination of all the spells you chose.
-        """
+        """ 
+        
+        while len(self._cantrip) < self.known_cantrip:
+            print("you are allowed to learn 3 cantrips.")
+            spell = input(f"what spell would you like to learn:\n{Spells.wizard_cantrips}")
+            self._cantrip.append(spell) if spell not in self._cantrip else print("you already know that spell.")
 
-        while self.known_cantrip > 0:
-            # phone_number = re.compile(r'(\d{3}) \d{3}-\d{4}')
-            print(f"you are allowed to learn {self.known_cantrip} cantrips.")
-            spell = input(f"what spell would you like to learn:\n{Spells.wizard_cantrips}\n").strip().title()
-            logging.debug(spell)
-            # logging.debug(phone_number.findall(spell))
-
-            if spell in self._cantrip:
-                print("you already know that spell.\n")
-                
-            elif spell not in Spells.wizard_cantrips:
-                print(f"you arn't allowed to learn {spell} please pick from the list.\n")
-
-            else:
-                self._cantrip.append(spell)
-                self.known_cantrip -= 1
-             
-        while self.known_level1 > 0:
-            print(f"you are allowed to learn {self.known_level1} level 1 spells.\n")
-            spell = input(f"what spell would you like to learn:\n{Spells.wizard_level1}\n").strip().title()
-                
-            if spell in self._level1:
-                print("you already know that spell.\n")
-
-            elif spell not in Spells.wizard_level1:
-                print(f"you arn't allowed to learn {spell} please pick from the list.\n")
-                
-            else:
-                self._level1.append(spell)
-                self.known_level1 -= 1
-
-
-            #This is how my brother would do it, I asked for help to fix somthing and he wanted to teach me stuff :).  
-
-
-            # while len(self._cantrip) < self.known_cantrip:
-            #     print("you are allowed to learn 3 cantrips.")
-            #     spell = input(f"what spell would you like to learn:\n{Spells.wizard_cantrips}")
-            #     self._cantrip.append(spell) if spell not in self._cantrip else print("you already know that spell.")
-
-            # while len(self._level1) < self.known_level:
-            #     print("you are allowed to learn 3 cantrips.")
-            #     spell = input(f"what spell would you like to learn:\n{Spells.wizard_level1}")
-            #     self._level1.append(spell) if spell not in self._level1 else print("you already know that spell.")
+        while len(self._level1) < self.known_level1:
+            print("you are allowed to learn 3 cantrips.")
+            spell = input(f"what spell would you like to learn:\n{Spells.wizard_level1}")
+            self._level1.append(spell) if spell not in self._level1 else print("you already know that spell.")
 
 
 
@@ -110,32 +75,15 @@ class Cleric:
         Returns:
             A list that is a combination of all the spells you chose.
         """
-        while self.known_cantrip > 0:
-            print(f"you are allowed to learn {self.known_cantrip} cantrips.")
-            #spell = str.title(input(f"what spell would you like to learn:\n{Spells.cleric_cantrips}\n"))
-            spell = input(f"what spell would you like to learn:\n{Spells.cleric_cantrips}\n").strip().title()
-            
-            if spell in self._cantrip:
-                print("you already know that spell.\n")
-                
-            elif spell not in Spells.cleric_cantrips:
-                print(f"you arn't allowed to learn {spell} please pick from the list.\n")
+        while len(self._cantrip) < self.known_cantrip:
+            print("you are allowed to learn 3 cantrips.")
+            spell = input(f"what spell would you like to learn:\n{Spells.cleric_cantrips}")
+            self._cantrip.append(spell) if spell not in self._cantrip else print("you already know that spell.")
 
-            else:
-                self._cantrip.append(spell)
-                self.known_cantrip -= 1
-             
-        while self.known_level1 > 0:
-            print(f"you are allowed to learn {self.known_level1} level 1 spells.\n")
-            spell = str.title(input(f"what spell would you like to learn:\n{Spells.cleric_level1}\n"))
-                
-            if spell in self._level1:
-                print("you already know that spell.\n")
+        while len(self._level1) < self.known_level1:
+            print("you are allowed to learn 3 cantrips.")
+            spell = input(f"what spell would you like to learn:\n{Spells.cleric_level1}")
+            self._level1.append(spell) if spell not in self._level1 else print("you already know that spell.")
 
-            elif spell not in Spells.cleric_level1:
-                print(f"you arn't allowed to learn {spell} please pick from the list.\n")
-                
-            else:
-                self._level1.append(spell)
-                self.known_level1 -= 1
         return self._cantrip + self._level1
+        

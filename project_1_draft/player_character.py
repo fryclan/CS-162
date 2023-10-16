@@ -20,11 +20,11 @@ class Adventurer:
     def __init__(self):
         self._inventory: dict = {}    
         self.level = 1
-        self.name = str(input("what is your name: "))
-        # self.entry_stringvar = tk.StringVar(root, "enter your name")
-        # self.name = tk.Entry(root, textvariable=self.entry_stringvar)
-        # self.entry_stringvar.set("Enter Your Name")
-        # self.name.pack()
+        # self.name = str(input("what is your name: "))
+        self.entry_stringvar = tk.StringVar(root, "enter your name")
+        self.name = tk.Entry(root, textvariable=self.entry_stringvar)
+        self.entry_stringvar.set("Enter Your Name")
+        self.name.pack()
         self.stat_dict = {name: roll_points() for name in self._stats_list} #name: roll_points() for name in self._stats_list
         self.health:int = 0
         self.player_type = 0
@@ -34,7 +34,7 @@ class Adventurer:
         self.Stat_modifier()
         self.skills_dict = {}
         self.Skills()
-        self.new_character = (f"Your name is\n{self.name}\n\
+        self.new_character = (f"Your name is\n{self.name.get()}\n\
 Your class is\n{self.player_type}\nYour stats are\n\
 {self.stat_dict}\nYour stat modifiers are\n\
 {self.modifier_dict}\nYour skills are\n{self.skills_dict}\n\
