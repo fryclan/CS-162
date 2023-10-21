@@ -4,6 +4,7 @@ from numpy import random
 import typing
 import Spells
 import logging
+
 # import re #This is the regex library really helpful to lear regex....!@!@@@@
 
 #TODO Learn Regex
@@ -38,16 +39,22 @@ class Wizard:
         Returns:
             A list that is a combination of all the spells you chose.
         """ 
-        
-        while len(self._cantrip) < self.known_cantrip:
-            print("you are allowed to learn 3 cantrips.")
-            spell = input(f"what spell would you like to learn:\n{Spells.wizard_cantrips}")
+        cantrips_left = len(self._cantrip)
+        i = 3
+        while cantrips_left < self.known_cantrip:
+            print(f"you are allowed to learn {i} cantrips.")
+            i -= 1
+            spell = str(input(f"what spell would you like to learn:\n{Spells.wizard_cantrips}")).title().strip()
             self._cantrip.append(spell) if spell not in self._cantrip else print("you already know that spell.")
-
-        while len(self._level1) < self.known_level1:
-            print("you are allowed to learn 3 cantrips.")
-            spell = input(f"what spell would you like to learn:\n{Spells.wizard_level1}")
+            cantrips_left = len(self._cantrip)
+        spell_level1_left = len(self._level1)
+        i=2
+        while spell_level1_left < self.known_level1:
+            print(f"you are allowed to learn {i} Level 1 spells.")
+            i -= 1
+            spell = input(f"what spell would you like to learn:\n{Spells.wizard_level1}").title().strip()
             self._level1.append(spell) if spell not in self._level1 else print("you already know that spell.")
+            spell_level1_left = len(self._level1)
 
 
 
@@ -70,20 +77,27 @@ class Cleric:
         self.known_level1: int = 2
         
     def magic(self):
-        """Function for setting up magic for an wizard.
+        """Function for setting up magic for an cleric.
 
         Returns:
             A list that is a combination of all the spells you chose.
         """
-        while len(self._cantrip) < self.known_cantrip:
-            print("you are allowed to learn 3 cantrips.")
-            spell = input(f"what spell would you like to learn:\n{Spells.cleric_cantrips}")
+        cantrips_left = len(self._cantrip)
+        i = 3
+        while cantrips_left < self.known_cantrip:
+            print(f"you are allowed to learn {i} cantrips.")
+            i -= 1
+            spell = str(input(f"what spell would you like to learn:\n{Spells.cleric_cantrips}")).title().strip()
             self._cantrip.append(spell) if spell not in self._cantrip else print("you already know that spell.")
-
-        while len(self._level1) < self.known_level1:
-            print("you are allowed to learn 3 cantrips.")
-            spell = input(f"what spell would you like to learn:\n{Spells.cleric_level1}")
+            cantrips_left = len(self._cantrip)
+        spell_level1_left = len(self._level1)
+        i=2
+        while spell_level1_left < self.known_level1:
+            print(f"you are allowed to learn {i} Level 1 spells.")
+            i -= 1
+            spell = input(f"what spell would you like to learn:\n{Spells.cleric_level1}").title().strip()
             self._level1.append(spell) if spell not in self._level1 else print("you already know that spell.")
+            spell_level1_left = len(self._level1)   
 
         return self._cantrip + self._level1
         
