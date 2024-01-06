@@ -6,6 +6,7 @@ from random_rolls_class import roll_points
 import tkinter as tk
 
 root = tk.Tk()
+root.geometry("926x943")
 
 class Adventurer:
     """class for creating an adventurer"""
@@ -94,13 +95,13 @@ class Adventurer:
             elif txt == 2:
                 self.player_type = "Wizard"
                 player = Wizard()
-                # self.spells.append(player.magic())
+                self.spells.append(player.magic())
                 self._inventory.update(Wizard._starting_gear)
                 break
             elif txt == 3:
                 self.player_type = "Cleric"
                 player = Cleric()
-                # self.spells.append(player.magic())
+                self.spells.append(player.magic())
                 self._inventory.update(Cleric._starting_gear)
                 break
             # elif txt == 0:
